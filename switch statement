@@ -1,0 +1,67 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+    int pin,choice,mobno,acc;
+    float balance=15000.00,withdrawal,amount;
+    
+        printf("\nWelcome to IOB\n");
+        printf("Insert Your card\n");
+        printf("Enter your pin:");
+        scanf("%d",&pin);
+        while(1){
+        if(pin==5252){
+            printf("1)check balance\n");
+            printf("2)withdrawal\n");
+            printf("3)deposit\n");
+            printf("4)exit\n");
+            printf("Enter your choice:");
+            scanf("%d",&choice);
+            
+            switch(choice){
+            case 1:
+            
+                printf("Your balance is:%f\n",balance);
+            break;
+            case 2:
+            
+                printf("Enter your acc no:");
+                scanf("%d",&acc);
+                
+                 if(acc==2345){
+                     printf("Enter your withdrawal:");
+                    scanf("%f",&amount);
+                    printf("your withdrawal:%f Your balance amount is:%f\n",amount,balance-amount);
+                }
+                else{
+                    printf("Wrong no");
+                }
+                break;
+            
+            case 3:
+            
+                    printf("Enter your mobno:");
+                    scanf("%d",&mobno);
+                if(mobno==9894){
+                    printf("deposit is:");
+                    scanf("%f",&amount);
+                    printf("Your deposit:%f your balance amount is:%f\n",amount,balance+amount);
+                }
+                else{
+                    printf("wrong mob no");
+                }
+                break;
+            
+            case 4:
+            
+                printf("Exit\n");
+                break;
+            
+            }   
+        }
+        else
+        {
+            printf("invalid pin..");
+        }
+        break;
+        }
+}
